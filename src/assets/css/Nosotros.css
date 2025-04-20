@@ -1,0 +1,39 @@
+/* Nosotros */
+
+.imgHead{
+    background-image: url("../img/DSC_1022_edit.jpg") ;
+    height: 400px;
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-attachment: fixed; /* Fija la imagen para que no se mueva con el desplazamiento */
+    background-position: center center; /* Centra la imagen en el área visible */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+}
+
+#equipo{
+   color: #3C1E66;
+}
+#equipo p {
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+#equipo div{
+    margin-bottom: 20px;
+}
+
+.titulos_postulaciones{
+   font-size: 2.0em;
+   color: #3C1E66;
+}
+
+.fechas_postulaciones{
+   color: #684b9e;
+}
+h4{
+   color: #684b9e;
+}
+
+ol>li{
+   color: #b48dc0;
+}

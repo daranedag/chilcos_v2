@@ -1,0 +1,9 @@
+.footer, #footer{
+    color: #3C1E66;
+    background-image: url("./pattern_chilcos.png") ;
+
+}
+.mapa{
+    width: 100%;
+    height: 300px;
+}
