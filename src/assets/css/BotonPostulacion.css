@@ -1,6 +1,14 @@
+@font-face {
+    font-family: 'LiraSans';
+    src: url('../fonts/lirasans-bookitalic-webfont.woff2') format('woff2'),
+         url('../fonts/lirasans-bookitalic-webfont.woff')  format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .boton-postulacion {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     background-color: #432a78;
     color: white;
     font-size: 18px;
@@ -12,8 +20,31 @@
     position: relative;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-direction: column;  
+}
+
+.boton-postulacion__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente    */
+    transform: rotate(-20deg);   /* ángulo que necesites */
+    transform-origin: center;
 }
   
-.boton-postulacion span {
-    transform: rotate(-20deg);
+.boton-postulacion__linea1,
+.boton-postulacion__linea2 {
+    margin: 0;
+    line-height: 1;          /* espacio mínimo */
+    padding: 0;
+    font-family: 'LiraSans', sans-serif;
+    transform: none;
+}
+
+.boton-postulacion__linea1 {
+    font-size: 14px;
+}
+
+.boton-postulacion__linea2 {
+    font-size: 40px;
 }

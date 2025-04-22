@@ -8,7 +8,7 @@ const Navbar = () => {
 
     return(
         <div className="grid-container">
-            <div className="grid-x grid-padding-x align-center align-middle bordes">
+            <div className="grid-x grid-padding-x align-center">
                 <div className="cell large-auto">
                     <Link to="/" className="logo">
                         <img className="logoLink" src="./logoChilcosColor.png" alt="logo-menu"/>
@@ -21,7 +21,7 @@ const Navbar = () => {
                         <li><Link to="/basica">Básica</Link></li>
                         <li>
                             <Link to="/postulacion">
-                                <BotonPostulacion texto1="Postulaciones" texto2="2026" />
+                                <BotonPostulacion texto1="POSTULACIONES" texto2="2026" />
                             </Link>
                         </li>
                     </ul>

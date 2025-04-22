@@ -5,8 +5,10 @@ import "../assets/css/BotonPostulacion.css";
 const BotonPostulacion = ({ texto1, texto2 }) => {
     return (
         <div className="boton-postulacion">
-            <span>{texto1}</span>
-            <span>{texto2}</span>
+            <div className="boton-postulacion__contenido">
+                <p className="boton-postulacion__linea1">{texto1}</p>
+                <p className="boton-postulacion__linea2">{texto2}</p>
+            </div>
         </div>
     )
 }

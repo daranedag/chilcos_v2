@@ -1,0 +1,19 @@
+.boton-categoria {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.boton-categoria__texto {
+    font-family: 'LiraSans', sans-serif;
+    font-size: 20px;
+    color: #432A78;
+    text-align: center;
+    font-weight: bold;
+}
