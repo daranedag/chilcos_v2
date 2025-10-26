@@ -1,75 +1,97 @@
 @font-face {
-    font-family: 'lira_sansblack_italic';
+    font-family: 'LiraSans';
     src: url('../fonts/lirasans-bookitalic-webfont.woff2') format('woff2'),
          url('../fonts/lirasans-bookitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: italic;
-
 }
+
 @font-face {
-    font-family: 'lira_sansblack_italic';
+    font-family: 'LiraSans';
     src: url('../fonts/lirasans-regular.woff2') format('woff2'),
          url('../fonts/lirasans-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
+/* Reset del contenedor grid */
 .grid-container {
-    padding-top: 0 !important;   /* Foundation agrega 1rem por defecto */
+    padding-top: 0 !important;
+    position: relative;
+    z-index: 1000;
 }
 
-ul{
-    font-size: 0.8 em;
+/* Tipografía general */
+ul {
+    font-size: 0.8em;
 }
-a{
-     color: #3C1E66;
+
+a {
+    color: #3C1E66;
 }
-a:hover{
+
+a:hover {
     color: #B48DC0;
 }
 
-body{
-   background-color: #F3F3F3;
-   color: #666;
-   font-family: 'lira_sansblack_italic', Arial, sans-serif;
-   font-style: normal;
-}
-h1{
-font-family: 'lira_sansblack_italic', Arial, sans-serif;
-   font-style: strong;
-   font-size: 1.5em;
-
-}
-
-.logoLink{
+/* Logo */
+.logoLink {
     margin-left: -35%;
     margin-top: -2%;
     max-width: 45%;
 }
 
-.carrusel{
-    height: auto;
+.logo {
+    margin-left: 20%;
+    max-width: 247px;
 }
 
-.grid-contenido{
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-.grid-x {
-    display: flex;
-    align-items: center; /* Centra verticalmente los elementos */
-}
-
+/* Menú */
 .menu {
     display: flex;
-    justify-content: center; /* Centra horizontalmente los elementos del menú */
-    align-items: center; /* Centra verticalmente los elementos del menú */
+    justify-content: center;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .menu li {
-    margin: 0 10px; /* Espaciado entre los elementos del menú */
+    margin: 0 10px;
+}
+
+/* Grid */
+.grid-x {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .logo {
+        margin-left: 5%;
+        max-width: 200px;
+    }
+    
+    .logoLink {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        margin-left: 25%;
+        max-width: 180px;
+    }
+    
+    .menu {
+        margin-left: -10px;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .logoLink {
+        margin-left: 0;
+        max-width: 60%;
+    }
 }

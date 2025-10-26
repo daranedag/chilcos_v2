@@ -1,45 +1,369 @@
 @import "foundation-sites/dist/css/foundation.min.css";
 @import "motion-ui/dist/motion-ui.min.css";
 
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+/* ========================================
+   Fuentes Personalizadas
+   ======================================== */
+@font-face {
+    font-family: 'LiraSans';
+    src: url('../fonts/lirasans-bookitalic-webfont.woff2') format('woff2'),
+         url('../fonts/lirasans-bookitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LiraSans';
+    src: url('../fonts/lirasans-regular.woff2') format('woff2'),
+         url('../fonts/lirasans-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ========================================
+   Reset y Estilos Globales
+   ======================================== */
+html, body, #root {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F3F3;
+    color: #666;
+    font-family: 'LiraSans', Arial, sans-serif;
+    font-style: normal;
+}
+
+/* ========================================
+   Tipografía
+   ======================================== */
+h1 {
+    font-family: 'LiraSans', Arial, sans-serif;
+    font-style: strong;
+    font-size: 1.5em;
+    color: #3C1E66;
+}
+
+h2 {
+    font-family: 'LiraSans', Arial, sans-serif;
+    font-style: italic;
+    font-size: 2em;
+    color: #3C1E66;
+}
+
+h3, h4 {
+    color: #684b9e;
+}
+
+h5 {
+    color: #3C1E66;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    font-size: 0.8em;
+}
+
+blockquote {
+    border-left: none;
+}
+
+cite {
+    color: #3C1E66;
+}
+
+/* ========================================
+   Enlaces
+   ======================================== */
+a {
+    color: #3C1E66;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #B48DC0;
+}
+
+.deshabilitado {
+    color: grey !important;
+    text-decoration: line-through !important;
+    pointer-events: none;
+}
+
+/* ========================================
+   Imágenes
+   ======================================== */
+.imgBienvenida {
+    max-width: 127%;
+}
+
+.globos {
+    max-width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carrusel {
+    height: auto;
+}
+
+.imgHead {
+    background-image: url("../img/DSC_1022_edit.jpg");
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* ========================================
+   Cards y Secciones
+   ======================================== */
+.card {
+    border: 0px;
+    margin-top: 40px;
+    background: none;
+    color: #666;
     text-align: center;
 }
 
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-}
-.logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
+.card-section {
+    text-align: justify;
+    hyphens: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    padding: 1rem;
 }
 
-@keyframes logo-spin {
-    from {
-        transform: rotate(0deg);
+.grid-contenido {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* ========================================
+   Fondos
+   ======================================== */
+.bgImg {
+    background-image: url("../img/web_chilcos_bg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: -180px;
+}
+
+.footer, #footer {
+    color: #3C1E66;
+    background-image: url("../img/pattern_chilcos_v2.png");
+    background-repeat: repeat;
+    background-size: 160px;
+}
+
+.textoClaro {
+    color: #fff;
+}
+
+/* ========================================
+   Tablas
+   ======================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 0px;
+}
+
+th {
+    background-color: #DFB8EE;
+    color: #3C1E66;
+}
+
+tr:nth-child(even) {
+    background-color: #F3F3F3;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3C1E66;
+}
+
+tbody td {
+    padding: 5px 5px;
+}
+
+/* ========================================
+   Componentes Específicos
+   ======================================== */
+#equipo {
+    color: #3C1E66;
+}
+
+#equipo p {
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+
+#equipo div {
+    margin-bottom: 20px;
+}
+
+.titulos_postulaciones {
+    font-size: 2.0em;
+    color: #3C1E66;
+}
+
+.fechas_postulaciones {
+    color: #684b9e;
+}
+
+ol > li {
+    color: #b48dc0;
+}
+
+.mapa {
+    width: 100%;
+    height: 300px;
+}
+
+.descargar {
+    background-color: #3C1E66;
+    font-weight: bold;
+    border-radius: 5%;
+    margin-top: 10%;
+}
+
+/* ========================================
+   Media Queries
+   ======================================== */
+
+/* Pantallas grandes (hasta 1480px) */
+@media (max-width: 1480px) {
+    .fotoTopI {
+        right: 6%;
     }
-    to {
-        transform: rotate(360deg);
+}
+
+/* Tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+    .imgBienvenida {
+        max-width: 100%;
+    }
+    
+    .logo {
+        margin-left: 5%;
+        max-width: 200px;
+    }
+    
+    .fotoTopI {
+        right: 2%;
+        max-width: 25%;
+    }
+    
+    .menu {
+        margin-left: 7%;
+    }
+    
+    .imgHead {
+        width: 100%;
+        height: 220px;
+        background-attachment: fixed;
+        background-position: top center;
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
-        animation: logo-spin infinite 20s linear;
+/* Móviles (hasta 480px) */
+@media (max-width: 480px) {
+    .imgBienvenida {
+        max-width: 100%;
+    }
+    
+    .logo {
+        margin-left: 25%;
+        max-width: 180px;
+    }
+    
+    .menu {
+        margin-left: -10px;
+    }
+    
+    .bgImg {
+        background-image: none;
+    }
+    
+    .grid-contenido {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .imgHead {
+        background-size: 200%;
+        background-attachment: fixed;
+        height: 220px;
+        background-position: center 100px;
+    }
+    
+    .globos {
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-.card {
-    padding: 2em;
+/* Móviles pequeños (hasta 375px) */
+@media (max-width: 375px) {
+    .logo {
+        margin-left: 25%;
+        height: 50%;
+        width: 50%;
+    }
+    
+    .menu {
+        font-size: 0.8em;
+    }
+    
+    .fotoTopI {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        max-width: 15%;
+    }
 }
 
-.read-the-docs {
-    color: #888;
+/* Móviles muy pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    .logo {
+        margin-left: 40%;
+        height: 25%;
+        width: 25%;
+    }
+    
+    .menu {
+        font-size: 0.63em;
+    }
+    
+    .fotoTopI {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        max-width: 15%;
+    }
 }
