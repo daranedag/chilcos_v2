@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import IMG from "../config/images";
 import "../assets/css/Kinder.css";
 
 const Kinder = () => {
@@ -9,7 +10,12 @@ const Kinder = () => {
     return (
         <main>
             {/* Banner de Encabezado */}
-            <div className="imgHead" style={{ backgroundImage: "url('assets/img/kinder_ronda.jpg')" }}>
+            <div
+                className="imgHead"
+                style={{ backgroundImage: `url('${IMG.heroKinder}')` }}
+                role="img"
+                aria-label="Kínder — Comunidad Chilcos"
+            >
                 <div className="grid-x grid-padding-x align-center align-middle"></div>
             </div>
 
@@ -39,12 +45,12 @@ const Kinder = () => {
                                         <ul className="orbit-container">
                                             <li className="is-active orbit-slide">
                                                 <figure className="orbit-figure">
-                                                    <img className="orbit-image carrusel" src="./assets/img/kinder1.jpg" alt="Kínder 1" />
+                                                    <img className="orbit-image carrusel" src={IMG.kinder1} alt="Kínder 1" />
                                                 </figure>
                                             </li>
                                             <li className="orbit-slide">
                                                 <figure className="orbit-figure">
-                                                    <img className="orbit-image carrusel" src="./assets/img/kinder2.jpg" alt="Kínder 2" />
+                                                    <img className="orbit-image carrusel" src={IMG.kinder2} alt="Kínder 2" />
                                                 </figure>
                                             </li>
                                         </ul>
@@ -57,6 +63,11 @@ const Kinder = () => {
 
                         <p>
                             A través de la imitación y del ejemplo, los niños y niñas aprenden de manera natural. Por eso, ofrecemos actividades artísticas como acuarela, modelado con cera de abeja, y festividades que conectan con el ritmo del año. También valoramos el contacto con la naturaleza y el juego al aire libre como pilares fundamentales de su desarrollo.
+                        </p>
+                        <p>
+                            Fomentamos el aprendizaje de artes del lenguaje a través de cuentos, canciones y poemas
+                            que acompañan el ritmo semanal. Además, un día a la semana se realizan actividades
+                            en inglés, integradas de forma lúdica y natural en la jornada.
                         </p>
                         <br />
                     </div>
@@ -94,12 +105,12 @@ const Kinder = () => {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Pre-kínder</td>
-                                    <td>4 años</td>
+                                    <td>Maternal</td>
+                                    <td>2 años (cumplidos al 31-03-2026)</td>
                                 </tr>
                                 <tr>
-                                    <td>Kínder</td>
-                                    <td>5 años</td>
+                                    <td>Kínder (multigrado 4–6 años)</td>
+                                    <td>4 años (cumplidos al 31-03-2026)</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -107,12 +118,38 @@ const Kinder = () => {
                         <p>
                             *Si tu hijo o hija está próximo a cumplir la edad, por favor contáctanos para evaluar su ingreso.
                         </p>
+                        <br />
+
+                        <h2 style={{ fontWeight: 'bold' }}>Información Importante</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Aspecto</th>
+                                    <th>Detalle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Grupos</td>
+                                    <td>Multigrado (Maternal + Kínder 4–6 años)</td>
+                                </tr>
+                                <tr>
+                                    <td>Horario</td>
+                                    <td>Lunes a viernes 8:15–13:15</td>
+                                </tr>
+                                <tr>
+                                    <td>Inglés</td>
+                                    <td>Un día a la semana integrado en la jornada</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
                     </div>
                 </div>
             </div>
             <br />
         </main>
     );
-}
+};
 
 export default Kinder;

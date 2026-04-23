@@ -1,11 +1,10 @@
 import React from "react";
-
 import "../assets/css/Banner.css";
 
-const Banner = ({ url }) => {
+const Banner = ({ src, alt = "Banner" }) => {
     return (
-        <img src="{ url }" alt="Banner" className="banner" />
-    )
-}
+        <img src={src} alt={alt} className="banner" />
+    );
+};
 
-export default BotonCategoria;
+export default Banner;

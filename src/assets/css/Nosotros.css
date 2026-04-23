@@ -1,39 +1,98 @@
 /* Nosotros */
 
-.imgHead{
-    background-image: url("../img/DSC_1022_edit.jpg") ;
+.imgHead {
     height: 400px;
-    background-size: cover; /* Asegura que la imagen cubra toda el área */
-    background-attachment: fixed; /* Fija la imagen para que no se mueva con el desplazamiento */
-    background-position: center center; /* Centra la imagen en el área visible */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-#equipo{
-   color: #3C1E66;
+/* Títulos de sección */
+.seccion-titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3C1E66;
+    line-height: 1.2;
 }
+
+.seccion-subtitulo {
+    font-size: 1.4rem;
+    color: #684b9e;
+    font-weight: bold;
+}
+
+/* Equipo */
+#equipo {
+    color: #3C1E66;
+}
+
 #equipo p {
     font-weight: bold;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
-#equipo div{
+
+#equipo div {
     margin-bottom: 20px;
 }
 
-.titulos_postulaciones{
-   font-size: 2.0em;
-   color: #3C1E66;
+.staff-grupo {
+    margin-bottom: 2.5rem;
 }
 
-.fechas_postulaciones{
-   color: #684b9e;
-}
-h4{
-   color: #684b9e;
+.staff-grupo-titulo {
+    text-align: center;
+    color: #3C1E66;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid #DFB8EE;
 }
 
-ol>li{
-   color: #b48dc0;
+.staff-card {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.staff-card .globos {
+    border-radius: 50%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.staff-card .globos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(60, 30, 102, 0.2);
+}
+
+.staff-nombre {
+    font-weight: bold;
+    color: #3C1E66;
+    margin: 0.4rem 0 0.1rem;
+    font-size: 0.85rem;
+}
+
+.staff-rol {
+    display: block;
+    color: #684b9e;
+    font-size: 0.78rem;
+}
+
+/* Subtítulos heredados de Postulación (usados en Nosotros también) */
+.titulos_postulaciones {
+    font-size: 2.0em;
+    color: #3C1E66;
+}
+
+.fechas_postulaciones {
+    color: #684b9e;
+}
+
+h4 {
+    color: #684b9e;
+}
+
+ol > li {
+    color: #b48dc0;
 }

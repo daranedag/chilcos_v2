@@ -1,0 +1,20 @@
+{
+  "name": "chilcos-api",
+  "version": "1.0.0",
+  "description": "API REST para el sitio web de la Comunidad Chilcos",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "pg": "^8.14.1"
+  }
+}

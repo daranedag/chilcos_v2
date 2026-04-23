@@ -1,11 +1,17 @@
 import React from "react";
+import IMG from "../config/images";
 import "../assets/css/Basica.css";
 
 const Basica = () => {
     return (
         <main>
             {/* Banner de Encabezado */}
-            <div className="imgHead" style={{ backgroundImage: "url('assets/img/DSC_1413.jpg')" }}>
+            <div
+                className="imgHead"
+                style={{ backgroundImage: `url('${IMG.heroBasica}')` }}
+                role="img"
+                aria-label="Básica — Comunidad Chilcos"
+            >
                 <div className="grid-x grid-padding-x align-center align-middle"></div>
             </div>
 
@@ -99,12 +105,45 @@ const Basica = () => {
                             *Si tu hijo o hija está próximo a cumplir la edad, por favor contáctanos para evaluar su ingreso.
                         </p>
                         <br />
+
+                        <h2 style={{ fontWeight: 'bold' }}>Información Importante</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Aspecto</th>
+                                    <th>Detalle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tamaño de grupo</td>
+                                    <td>Máximo 15 estudiantes por curso</td>
+                                </tr>
+                                <tr>
+                                    <td>Modelo docente</td>
+                                    <td>Maestro o maestra jefe que acompaña al grupo durante varios años</td>
+                                </tr>
+                                <tr>
+                                    <td>Horario 1° a 4°</td>
+                                    <td>Lunes a martes 8:15–15:30, miércoles a viernes 8:15–13:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Horario 5° a 8°</td>
+                                    <td>Lunes a jueves 8:15–15:30, viernes 8:15–13:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Talleres extracurriculares</td>
+                                    <td>Disponibles en jornada tarde (consultar disponibilidad)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
                     </div>
                 </div>
             </div>
             <br />
         </main>
     );
-}
+};
 
 export default Basica;
